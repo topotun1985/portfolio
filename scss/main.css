@@ -20,18 +20,105 @@
     /* line 24, /home/vadim/Рабочий стол/train7/modern_portfolio/scss/_menu.scss */
     .menu-btn.close .btn-line:nth-child(1) {
       transform: rotate(45deg) translate(5px, 5px); }
-    /* line 29, /home/vadim/Рабочий стол/train7/modern_portfolio/scss/_menu.scss */
+    /* line 27, /home/vadim/Рабочий стол/train7/modern_portfolio/scss/_menu.scss */
     .menu-btn.close .btn-line:nth-child(2) {
       opacity: 0; }
-    /* line 34, /home/vadim/Рабочий стол/train7/modern_portfolio/scss/_menu.scss */
+    /* line 30, /home/vadim/Рабочий стол/train7/modern_portfolio/scss/_menu.scss */
     .menu-btn.close .btn-line:nth-child(3) {
       transform: rotate(-45deg) translate(7px, -6px); }
 
-/* line 4, /home/vadim/Рабочий стол/train7/modern_portfolio/scss/main.scss */
+/* line 39, /home/vadim/Рабочий стол/train7/modern_portfolio/scss/_menu.scss */
+.menu {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  opacity: 0.95;
+  visibility: hidden; }
+  /* line 46, /home/vadim/Рабочий стол/train7/modern_portfolio/scss/_menu.scss */
+  .menu.show {
+    visibility: visible; }
+  /* line 50, /home/vadim/Рабочий стол/train7/modern_portfolio/scss/_menu.scss */
+  .menu-branding, .menu-nav {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
+    float: left;
+    width: 50%;
+    height: 100vh;
+    overflow: hidden; }
+  /* line 62, /home/vadim/Рабочий стол/train7/modern_portfolio/scss/_menu.scss */
+  .menu-nav {
+    margin: 0;
+    padding: 0;
+    background: #1e1e1e;
+    list-style: none;
+    transform: translate3d(0, -100%, 0);
+    transition: all 0.5s ease-out; }
+    /* line 70, /home/vadim/Рабочий стол/train7/modern_portfolio/scss/_menu.scss */
+    .menu-nav.show {
+      transform: translate3d(0, 0, 0); }
+  /* line 77, /home/vadim/Рабочий стол/train7/modern_portfolio/scss/_menu.scss */
+  .menu-branding {
+    background: #2b2b2b;
+    transform: translate3d(0, 100%, 0);
+    transition: all 0.5s ease-out; }
+    /* line 82, /home/vadim/Рабочий стол/train7/modern_portfolio/scss/_menu.scss */
+    .menu-branding.show {
+      transform: translate3d(0, 0, 0); }
+    /* line 88, /home/vadim/Рабочий стол/train7/modern_portfolio/scss/_menu.scss */
+    .menu-branding .portrait {
+      width: 340px;
+      height: 340px;
+      background: url("../../img/portrait.jpg");
+      border-radius: 50%;
+      border: 3px solid #eece1e; }
+  /* line 97, /home/vadim/Рабочий стол/train7/modern_portfolio/scss/_menu.scss */
+  .menu .nav-item {
+    transform: translate3d(600px, 0, 0);
+    transition: all 0.5s ease-out; }
+    /* line 101, /home/vadim/Рабочий стол/train7/modern_portfolio/scss/_menu.scss */
+    .menu .nav-item.show {
+      transform: translate3d(0, 0, 0); }
+    /* line 105, /home/vadim/Рабочий стол/train7/modern_portfolio/scss/_menu.scss */
+    .menu .nav-item.current > a {
+      color: #eece1e; }
+  /* line 110, /home/vadim/Рабочий стол/train7/modern_portfolio/scss/_menu.scss */
+  .menu .nav-link {
+    display: inline-block;
+    position: relative;
+    font-size: 30px;
+    text-transform: uppercase;
+    padding: 1rem 0;
+    font-weight: 300;
+    color: #fff;
+    text-decoration: none;
+    transition: all 0.5s ease-out; }
+    /* line 121, /home/vadim/Рабочий стол/train7/modern_portfolio/scss/_menu.scss */
+    .menu .nav-link:hover {
+      color: #eece1e; }
+
+/* line 129, /home/vadim/Рабочий стол/train7/modern_portfolio/scss/_menu.scss */
+.nav-item:nth-child(1) {
+  transition-delay: 0.1s; }
+
+/* line 129, /home/vadim/Рабочий стол/train7/modern_portfolio/scss/_menu.scss */
+.nav-item:nth-child(2) {
+  transition-delay: 0.2s; }
+
+/* line 129, /home/vadim/Рабочий стол/train7/modern_portfolio/scss/_menu.scss */
+.nav-item:nth-child(3) {
+  transition-delay: 0.3s; }
+
+/* line 129, /home/vadim/Рабочий стол/train7/modern_portfolio/scss/_menu.scss */
+.nav-item:nth-child(4) {
+  transition-delay: 0.4s; }
+
+/* line 5, /home/vadim/Рабочий стол/train7/modern_portfolio/scss/main.scss */
 * {
   box-sizing: border-box; }
 
-/* line 8, /home/vadim/Рабочий стол/train7/modern_portfolio/scss/main.scss */
+/* line 9, /home/vadim/Рабочий стол/train7/modern_portfolio/scss/main.scss */
 body {
   background-color: #444;
   color: #fff;
@@ -55,53 +142,212 @@ body {
       z-index: -1;
       background: rgba(68, 68, 68, 0.9); }
 
-/* line 19, /home/vadim/Рабочий стол/train7/modern_portfolio/scss/main.scss */
+/* line 20, /home/vadim/Рабочий стол/train7/modern_portfolio/scss/main.scss */
 h1, h2, h3 {
   margin: 0;
   font-weight: 400; }
-  /* line 23, /home/vadim/Рабочий стол/train7/modern_portfolio/scss/main.scss */
+  /* line 24, /home/vadim/Рабочий стол/train7/modern_portfolio/scss/main.scss */
   h1.lg-heading, h2.lg-heading, h3.lg-heading {
     font-size: 6rem; }
-  /* line 27, /home/vadim/Рабочий стол/train7/modern_portfolio/scss/main.scss */
+  /* line 28, /home/vadim/Рабочий стол/train7/modern_portfolio/scss/main.scss */
   h1.sm-heading, h2.sm-heading, h3.sm-heading {
     margin-bottom: 2rem;
     padding: 0.2rem 1rem;
     background: rgba(73, 73, 73, 0.5); }
 
-/* line 34, /home/vadim/Рабочий стол/train7/modern_portfolio/scss/main.scss */
+/* line 35, /home/vadim/Рабочий стол/train7/modern_portfolio/scss/main.scss */
 a {
   color: #fff;
   text-decoration: none; }
 
-/* line 39, /home/vadim/Рабочий стол/train7/modern_portfolio/scss/main.scss */
+/* line 40, /home/vadim/Рабочий стол/train7/modern_portfolio/scss/main.scss */
 header {
   position: fixed;
   z-index: 2;
   width: 100%; }
 
-/* line 45, /home/vadim/Рабочий стол/train7/modern_portfolio/scss/main.scss */
+/* line 46, /home/vadim/Рабочий стол/train7/modern_portfolio/scss/main.scss */
 .text-secondary {
   color: #eece1e; }
 
-/* line 49, /home/vadim/Рабочий стол/train7/modern_portfolio/scss/main.scss */
+/* line 50, /home/vadim/Рабочий стол/train7/modern_portfolio/scss/main.scss */
 main {
   padding: 4rem;
-  height: 100%; }
-  /* line 53, /home/vadim/Рабочий стол/train7/modern_portfolio/scss/main.scss */
+  min-height: calc(100vh-60px); }
+  /* line 55, /home/vadim/Рабочий стол/train7/modern_portfolio/scss/main.scss */
   main .icons {
     margin-top: 1rem; }
-    /* line 56, /home/vadim/Рабочий стол/train7/modern_portfolio/scss/main.scss */
+    /* line 58, /home/vadim/Рабочий стол/train7/modern_portfolio/scss/main.scss */
     main .icons a {
       padding: 0.8rem; }
-      /* line 59, /home/vadim/Рабочий стол/train7/modern_portfolio/scss/main.scss */
+      /* line 61, /home/vadim/Рабочий стол/train7/modern_portfolio/scss/main.scss */
       main .icons a:hover {
         color: #eece1e;
         transition: all 0.5s ease-out; }
-  /* line 66, /home/vadim/Рабочий стол/train7/modern_portfolio/scss/main.scss */
+  /* line 68, /home/vadim/Рабочий стол/train7/modern_portfolio/scss/main.scss */
   main#home {
     overflow: hidden; }
-    /* line 68, /home/vadim/Рабочий стол/train7/modern_portfolio/scss/main.scss */
+    /* line 70, /home/vadim/Рабочий стол/train7/modern_portfolio/scss/main.scss */
     main#home h1 {
       margin-top: 20vh; }
+
+/* line 77, /home/vadim/Рабочий стол/train7/modern_portfolio/scss/main.scss */
+.about-info {
+  display: grid;
+  grid-gap: 30px;
+  grid-template-areas: 'bioimage bio bio' 'job1 job2 job3';
+  grid-template-colums: 1fr 1fr 1fr; }
+  /* line 85, /home/vadim/Рабочий стол/train7/modern_portfolio/scss/main.scss */
+  .about-info .bio-image {
+    grid-area: bioimage;
+    margin: auto;
+    border-radius: 50%;
+    border: #eece1e 3px solid;
+    height: 250px;
+    width: 250px; }
+  /* line 94, /home/vadim/Рабочий стол/train7/modern_portfolio/scss/main.scss */
+  .about-info .bio {
+    grid-area: bio;
+    font-size: 1.5rem; }
+  /* line 99, /home/vadim/Рабочий стол/train7/modern_portfolio/scss/main.scss */
+  .about-info .job-1 {
+    grid-area: job1; }
+  /* line 103, /home/vadim/Рабочий стол/train7/modern_portfolio/scss/main.scss */
+  .about-info .job-2 {
+    grid-area: job2; }
+  /* line 107, /home/vadim/Рабочий стол/train7/modern_portfolio/scss/main.scss */
+  .about-info .job-3 {
+    grid-area: job3; }
+  /* line 111, /home/vadim/Рабочий стол/train7/modern_portfolio/scss/main.scss */
+  .about-info .job {
+    background: #5e5e5e;
+    padding: 0.5rem;
+    border-bottom: #eece1e 5px solid; }
+
+/* line 119, /home/vadim/Рабочий стол/train7/modern_portfolio/scss/main.scss */
+.projects {
+  display: grid;
+  grid-gap: 0.7rem;
+  grid-template-columns: repeat(3, 1fr); }
+  /* line 124, /home/vadim/Рабочий стол/train7/modern_portfolio/scss/main.scss */
+  .projects img {
+    width: 100%;
+    border: 5px solid #fff;
+    border-radius: 10px; }
+    /* line 129, /home/vadim/Рабочий стол/train7/modern_portfolio/scss/main.scss */
+    .projects img:hover {
+      opacity: 0.5;
+      border-color: #eece1e;
+      transition: all 0.5s ease-out; }
+
+/* line 139, /home/vadim/Рабочий стол/train7/modern_portfolio/scss/main.scss */
+.boxes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 1rem; }
+  /* line 146, /home/vadim/Рабочий стол/train7/modern_portfolio/scss/main.scss */
+  .boxes div {
+    font-size: 2rem;
+    border: 3px #fff solid;
+    padding: 1.5rem 2.5rem;
+    margin-bottom: 3rem;
+    transition: all 0.5s ease-out; }
+    /* line 154, /home/vadim/Рабочий стол/train7/modern_portfolio/scss/main.scss */
+    .boxes div:hover {
+      padding: 0.5rem 1.5rem;
+      background: #eece1e;
+      color: #000; }
+      /* line 158, /home/vadim/Рабочий стол/train7/modern_portfolio/scss/main.scss */
+      .boxes div:hover span {
+        color: #000; }
+
+/* line 166, /home/vadim/Рабочий стол/train7/modern_portfolio/scss/main.scss */
+.btn, .btn-dark, .btn-light {
+  display: block;
+  padding: 0.5rem 1rem;
+  border: 0;
+  margin-bottom: 0.3rem .btn; }
+  /* line 171, /home/vadim/Рабочий стол/train7/modern_portfolio/scss/main.scss */
+  .btn :hover, .btn-dark :hover, .btn-light :hover {
+    background: #eece1e;
+    color: #000; }
+
+/* line 177, /home/vadim/Рабочий стол/train7/modern_portfolio/scss/main.scss */
+.btn-dark {
+  background: black;
+  color: #fff; }
+
+/* line 183, /home/vadim/Рабочий стол/train7/modern_portfolio/scss/main.scss */
+.btn-light {
+  background: #c4c4c4;
+  color: #333; }
+
+/* line 189, /home/vadim/Рабочий стол/train7/modern_portfolio/scss/main.scss */
+#main-footer {
+  text-align: center;
+  padding: 1rem;
+  background: #2b2b2b;
+  height: 60px; }
+
+@media screen and (min-width: 1171px) {
+  /* line 3, /home/vadim/Рабочий стол/train7/modern_portfolio/scss/_mobile.scss */
+  .projects {
+    grid-template-columns: repeat(4, 1fr); } }
+
+@media screen and (min-width: 769px) and (max-width: 1170px) {
+  /* line 10, /home/vadim/Рабочий стол/train7/modern_portfolio/scss/_mobile.scss */
+  .projects {
+    grid-template-columns: repeat(3, 1fr); } }
+
+@media screen and (max-width: 768px) {
+  /* line 17, /home/vadim/Рабочий стол/train7/modern_portfolio/scss/_mobile.scss */
+  main {
+    align-items: center;
+    text-align: center; }
+    /* line 21, /home/vadim/Рабочий стол/train7/modern_portfolio/scss/_mobile.scss */
+    main .lg-heading {
+      line-height: 1;
+      margin-bottom: 1rem; }
+  /* line 27, /home/vadim/Рабочий стол/train7/modern_portfolio/scss/_mobile.scss */
+  ul.menu-nav,
+  div.menu-branding {
+    float: none;
+    width: 100%;
+    min-height: 0; }
+    /* line 33, /home/vadim/Рабочий стол/train7/modern_portfolio/scss/_mobile.scss */
+    ul.menu-nav.show,
+    div.menu-branding.show {
+      transform: translate3d(0, 0, 0); }
+  /* line 38, /home/vadim/Рабочий стол/train7/modern_portfolio/scss/_mobile.scss */
+  .menu-nav {
+    height: 70vh;
+    transform: translate3d(-100%, 0, 0);
+    font-size: 24px; }
+  /* line 44, /home/vadim/Рабочий стол/train7/modern_portfolio/scss/_mobile.scss */
+  .menu-branding {
+    height: 30vh;
+    transform: translate3d(0, -100%, 0); }
+    /* line 48, /home/vadim/Рабочий стол/train7/modern_portfolio/scss/_mobile.scss */
+    .menu-branding .portrait {
+      background: url("../../img/portrait2.jpg");
+      width: 200px;
+      height: 200px; }
+  /* line 55, /home/vadim/Рабочий стол/train7/modern_portfolio/scss/_mobile.scss */
+  .about-info {
+    grid-template-areas: 'bioimage' 'bio' 'job1' 'job2' 'job3';
+    grid-template-columns: 1fr; }
+  /* line 67, /home/vadim/Рабочий стол/train7/modern_portfolio/scss/_mobile.scss */
+  .projects {
+    grid-template-columns: repeat(2, 1fr); } }
+
+@media screen and (max-width: 500px) {
+  /* line 74, /home/vadim/Рабочий стол/train7/modern_portfolio/scss/_mobile.scss */
+  main#home h1 {
+    margin-top: 10vh; }
+  /* line 78, /home/vadim/Рабочий стол/train7/modern_portfolio/scss/_mobile.scss */
+  .projects {
+    grid-template-columns: repeat(1, 1fr); } }
 
 /*# sourceMappingURL=main.css.map */
