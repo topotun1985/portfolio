@@ -2,10 +2,9 @@
   "name": "modern_portfolio",
   "version": "1.0.0",
   "description": "Responsive portfolio website",
-  "main": "index.js",
- 
+  "main": "index.js", 
   "scripts": {
-    "sass": "node-sass -w scss/ -o dist/css/ --recursive",
+    "sass": "node-sass -w scss/ -o dist/css/ --recursive"
   },
   "author": "Vadim",
   "license": "MIT",
